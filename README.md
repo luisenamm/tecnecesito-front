@@ -1,5 +1,7 @@
 <h1>TECnecesito</h1>
 
+Frontend for the Cloud Computing class project.
+
 Based on the <a href="https://ui-lib.com/downloads/matx-react-dashboard/">Matx React Material Design Admin Dashboard Template</a>
 
 <h2 id="availablescripts">Getting started</h2>
