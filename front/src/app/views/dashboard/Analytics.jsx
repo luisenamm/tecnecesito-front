@@ -21,7 +21,7 @@ const Analytics = () => {
                         <StatCards2 />
 
                         <h4 className="card-title text-muted mb-4">
-                            Ongoing Projects
+                            Ongoing Works
                         </h4>
                         <RowCards />
                     </Grid>

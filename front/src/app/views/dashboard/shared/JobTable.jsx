@@ -33,19 +33,11 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     },
 }))
 
-const TopSellingTable = () => {
+const JobTables = () => {
     const classes = useStyles()
 
     return (
         <Card elevation={3} className="pt-5 mb-6">
-            <div className="flex justify-between items-center px-6 mb-3">
-                <span className="card-title">Jobs requested</span>
-                <Select size="small" defaultValue="1" disableUnderline>
-                    <MenuItem value="1">Today</MenuItem>
-                    <MenuItem value="2">Last Week</MenuItem>
-                    <MenuItem value="3">Last Month</MenuItem> 
-                </Select>
-            </div>
             <div className="overflow-auto">
                 <Table
                     className={clsx(
@@ -66,6 +58,9 @@ const TopSellingTable = () => {
                             </TableCell>
                             <TableCell className="px-0" colSpan={2}>
                                 Grade
+                            </TableCell>
+                            <TableCell className="px-0" colSpan={2}>
+                                Number of reviews
                             </TableCell>
                         </TableRow>
                     </TableHead>
@@ -108,7 +103,7 @@ const TopSellingTable = () => {
                                 </TableCell>  
                                 <TableCell
                                     className="px-0 capitalize"
-                                    colSpan={4}
+                                    colSpan={2}
                                     align="left"
                                 >
                                     <div className="flex items-center">                                    
@@ -116,7 +111,18 @@ const TopSellingTable = () => {
                                             {client.grade}
                                         </p>
                                     </div>
-                                </TableCell>                        
+                                </TableCell>   
+                                <TableCell
+                                    className="px-0 capitalize"
+                                    colSpan={2}
+                                    align="left"
+                                >
+                                    <div className="flex items-center">                                    
+                                        <p className="m-0">
+                                            {client.reviews}
+                                        </p>
+                                    </div>
+                                </TableCell>                       
                             </TableRow>
                         ))}
                     </TableBody>
@@ -133,35 +139,24 @@ const clients = [
         job:'Carpenter',
         price: 500,
         grade: 4.9,
+        reviews:10,
     },
     {
-        imgUrl: '/assets/images/face-2.jpg',
-        name: 'Juan López',
-        job:'Mechanic',
-        price: 1500,
-        grade: 4.8,
-    },
-    {
-        imgUrl: '/assets/images/face-4.jpg',
-        name: 'Erika Mercado',
-        job:'Baker',
-        price: 600,
-        grade: 4.9,
-    },
-    {
-        imgUrl: '/assets/images/face-5.jpg',
-        name: 'Julieta Vázquez',
-        job:'Chef',
-        price: 2500,
-        grade: 4.6,
-    },
-    {
-        imgUrl: '/assets/images/face-1.png',
-        name: 'Gerardo Guzmán',
-        job:'Locksmith',
-        price: 400,
+        imgUrl: '/assets/images/face-6.jpg',
+        name: 'Francisco Ochoa',
+        job:'House Painter',
+        price: 1400,
         grade: 4.7,
+        reviews:12,
+    },
+    {
+        imgUrl: '/assets/images/face-7.jpg',
+        name: 'Daniel Montes',
+        job:'Electrical Technician',
+        price: 350,
+        grade: 4.5,
+        reviews:27,
     },
 ]
 
-export default TopSellingTable
+export default JobTables

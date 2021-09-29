@@ -9,8 +9,6 @@ import {
     TableCell,
     TableBody,
     Avatar,
-    MenuItem,
-    Select,
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
@@ -33,19 +31,11 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
     },
 }))
 
-const TopSellingTable = () => {
+const FavTables = () => {
     const classes = useStyles()
 
     return (
-        <Card elevation={3} className="pt-5 mb-6">
-            <div className="flex justify-between items-center px-6 mb-3">
-                <span className="card-title">Jobs requested</span>
-                <Select size="small" defaultValue="1" disableUnderline>
-                    <MenuItem value="1">Today</MenuItem>
-                    <MenuItem value="2">Last Week</MenuItem>
-                    <MenuItem value="3">Last Month</MenuItem> 
-                </Select>
-            </div>
+        <Card elevation={3} className="pt-5 mb-6">            
             <div className="overflow-auto">
                 <Table
                     className={clsx(
@@ -62,7 +52,7 @@ const TopSellingTable = () => {
                                 Job
                             </TableCell>
                             <TableCell className="px-0" colSpan={2}>
-                                Cost
+                                Times requested
                             </TableCell>
                             <TableCell className="px-0" colSpan={2}>
                                 Grade
@@ -100,11 +90,7 @@ const TopSellingTable = () => {
                                     align="left"
                                     colSpan={2}
                                 >
-                                    $
-                                    {client.price > 999
-                                        ? (client.price / 1000).toFixed(1) +
-                                          'k'
-                                        : client.price}
+                                    {client.times}
                                 </TableCell>  
                                 <TableCell
                                     className="px-0 capitalize"
@@ -131,37 +117,23 @@ const clients = [
         imgUrl: '/assets/images/face-1.jpg',
         name: 'David García',
         job:'Carpenter',
-        price: 500,
+        times: 5,
         grade: 4.9,
-    },
-    {
-        imgUrl: '/assets/images/face-2.jpg',
-        name: 'Juan López',
-        job:'Mechanic',
-        price: 1500,
-        grade: 4.8,
     },
     {
         imgUrl: '/assets/images/face-4.jpg',
         name: 'Erika Mercado',
         job:'Baker',
-        price: 600,
+        times: 10,
         grade: 4.9,
     },
     {
-        imgUrl: '/assets/images/face-5.jpg',
-        name: 'Julieta Vázquez',
-        job:'Chef',
-        price: 2500,
+        imgUrl: '/assets/images/face-3.png',
+        name: 'Miguel Hernández',
+        job:'Blacksmith',
+        times: 2,
         grade: 4.6,
-    },
-    {
-        imgUrl: '/assets/images/face-1.png',
-        name: 'Gerardo Guzmán',
-        job:'Locksmith',
-        price: 400,
-        grade: 4.7,
     },
 ]
 
-export default TopSellingTable
+export default FavTables

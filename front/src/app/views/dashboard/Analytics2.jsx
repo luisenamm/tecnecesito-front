@@ -1,14 +1,8 @@
 import React from 'react'
 import {
     Card,
-    TextField,
-    MenuItem,
-    IconButton,
-    Icon,
-    Grid,
 } from '@material-ui/core'
 import TopSellingTable from './shared/TopSellingTable'
-
 
 const Analytics2 = () => {
     return (

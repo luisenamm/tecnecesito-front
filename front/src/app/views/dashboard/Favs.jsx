@@ -1,38 +1,22 @@
 import React from 'react'
 import {
     Card,
-    TextField,
-    MenuItem,
-    IconButton,
-    Icon,
-    Grid,
 } from '@material-ui/core'
-import StatCard3 from './shared/StatCard3'
-import ComparisonChart2 from './shared/ComparisonChart2'
-import StatCard4 from './shared/StatCard4'
-import GaugeProgressCard from './shared/GuageProgressCard'
-import FollowerCard from './shared/FollowerCard'
-import FollowerCard2 from './shared/FollowerCard2'
+import FavTables from './shared/FavoritesTable'
 
-const Analytics2 = () => {
+const Favorites = () => {
     return (
-        <div className="analytics m-sm-30">           
+        <div className="analytics m-sm-30">
+            <div className="flex justify-between items-center items-center mb-6">
+                <h3 className="m-0">
+                    Client Favorites
+                </h3>
+            </div>
 
-           
-            <Grid container spacing={3}>
-                <Grid item md={4} xs={12}>
-                    <StatCard4 />
-                </Grid>
-                <Grid item md={4} xs={12}>
-                    <GaugeProgressCard />
-                </Grid>
-                <Grid item md={4} xs={12}>
-                    <FollowerCard />
-                    <FollowerCard2 />
-                </Grid>
-            </Grid>
+            <Card className="mt-5 mb-6" elevation={3}>
+                <FavTables></FavTables>
+            </Card>
         </div>
     )
 }
-
-export default Analytics2
+export default Favorites
