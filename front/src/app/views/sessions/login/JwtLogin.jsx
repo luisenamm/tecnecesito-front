@@ -75,7 +75,7 @@ const JwtLogin = () => {
                             <img
                                 className="w-200"
                                 src="/assets/images/illustrations/icono.png"
-                                alt=""
+                                alt="Logo"
                             />
                         </div>
                     </Grid>

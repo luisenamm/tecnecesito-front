@@ -46,8 +46,8 @@ const ForgotPassword = () => {
                         <div className="p-8 flex justify-center items-center h-full">
                             <img
                                 className="w-full"
-                                src="/assets/images/illustrations/dreamer.svg"
-                                alt=""
+                                src="/assets/images/illustrations/icono.png"
+                                alt="Logo"
                             />
                         </div>
                     </Grid>
